@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
   validateDefault();
 });
 
-// SetError Method
+
 function SetError(element, message) {
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".error");
@@ -19,7 +19,7 @@ function SetError(element, message) {
   inputControl.classList.add("error");
   inputControl.classList.remove("success");
 }
-// SetSuccess Method
+
 function SetSuccess(element) {
   const inputControl = element.parentElement;
   const errorDisplay = inputControl.querySelector(".error");
@@ -29,14 +29,14 @@ function SetSuccess(element) {
   inputControl.classList.remove("error");
 }
 
-// Valid email
+
 function ValidEmail(element) {
   const lower = element.toLowerCase();
   const istrue = lower.search("@gmail.com");
   console.log(istrue);
   return istrue;
 }
-// ValidateDefault Method
+
 
 function validateDefault() {
   const usernameValue = username.value.trim();
@@ -82,39 +82,4 @@ function validateDefault() {
   }
 }
 
-// // function seterror
-// function SetError(element, message) {
-//   const inputControl = element.parentElement;
-//   const errorDisplay = inputControl.querySelector(".error");
 
-//   errorDisplay.innerHTML = message;
-//   inputControl.classList.add("error");
-//   inputControl.classList.remove("seccuss");
-// }
-
-// // function SetSeccuss
-
-// function SetSeccuss(element) {
-//   const inputControl = element.parentElement;
-//   const errorDisplay = inputControl.querySelector(".error");
-
-//   errorDisplay.innerHTML = "";
-//   inputControl.classList.add("success");
-//   inputControl.classList.remove("error");
-// }
-
-// //  Validate Method
-
-// function validateDefault() {
-//   const usernameValue = username.value;
-//   const lastnameValue = lastname.value;
-//   const emailValue = email.value;
-//   const passwordValue = password.value.trim();
-//   const password2Value = password2.value.trim();
-
-//   if (usernameValue === "") {
-//     SetError(username, "The username is required.");
-//   } else {
-//     SetSeccuss(username);
-//   }
-// }
